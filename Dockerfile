@@ -7,9 +7,7 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
 
 RUN chmod +x kubectl
 
-RUN mkdir -p ~/.local/bin/kubectl
-
-RUN mv ./kubectl ~/.local/bin/kubectl
+RUN mv kubectl /bin/
 
 COPY entrypoint.sh /entrypoint.sh
 
