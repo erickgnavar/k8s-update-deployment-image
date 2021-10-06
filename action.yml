@@ -19,6 +19,9 @@ inputs:
   image:
     description: "Image to be used on update"
     required: true
+  container:
+    description: "Image to be used on update"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -29,3 +32,4 @@ runs:
     - ${{ inputs.namespace }}
     - ${{ inputs.name }}
     - ${{ inputs.image }}
+    - ${{ inputs.container }}
