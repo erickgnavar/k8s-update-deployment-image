@@ -1,6 +1,6 @@
 # Deploy to kubernetes action
 
-This action will run `kubectl` to update the given deployment container image
+This action will run `kubectl` to update the given deployment container with a new image
 
 ## Inputs
 
