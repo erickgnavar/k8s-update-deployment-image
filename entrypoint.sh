@@ -21,6 +21,6 @@ echo "${KUBERNETES_CERT}" | base64 -d > ca.crt
 kubectl config set-cluster default --server="${KUBERNETES_SERVER}" --certificate-authority=ca.crt
 kubectl config use-context default
 
-echo "Deploying to $KUBERNETES_SERVER"
+echo "Deploying to ${KUBERNETES_SERVER}"
 
 kubectl -n "${NAMESPACE}" set image "deployment/${DEPLOYMENT}" "${CONTAINER}=${IMAGE}"

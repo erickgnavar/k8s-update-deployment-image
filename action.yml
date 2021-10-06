@@ -25,11 +25,3 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  # args:
-  #   - ${{ inputs.cert }}
-  #   - ${{ inputs.server }}
-  #   - ${{ inputs.token }}
-  #   - ${{ inputs.namespace }}
-  #   - ${{ inputs.name }}
-  #   - ${{ inputs.image }}
-  #   - ${{ inputs.container }}
