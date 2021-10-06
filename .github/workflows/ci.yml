@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install shellcheck
-        run: apt update && apt install shellcheck --yes
+        run: sudo apt update && sudo apt install shellcheck --yes
 
       - name: Run shellcheck
         run: shellcheck entrypoint.sh
