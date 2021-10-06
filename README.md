@@ -20,9 +20,9 @@ This action will run `kubectl` to update the given deployment container image
 - name: Update deployment container image
   uses: erickgnavar/k8s-update-deployment-image@v1
     with:
-      cert: ${{ secrets.DEV_KUBERNETES_CERT }}
-      server: ${{ secrets.DEV_KUBERNETES_SERVER }}
-      token: ${{ secrets.DEV_KUBERNETES_TOKEN }}
+      cert: ${{ secrets.KUBERNETES_CERT }}
+      server: ${{ secrets.KUBERNETES_SERVER }}
+      token: ${{ secrets.KUBERNETES_TOKEN }}
       namespace: default
       name: my_project
       image: new_image_name
