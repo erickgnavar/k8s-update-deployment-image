@@ -1,12 +1,12 @@
 #!/bin/sh -l
 
-KUBERNETES_CERT="$1"
-KUBERNETES_SERVER="$2"
-KUBERNETES_TOKEN="$4"
-NAMESPACE="$3"
-DEPLOYMENT="$6"
-IMAGE="$7"
-CONTAINER="$7"
+KUBERNETES_CERT="${INPUT_CERT}"
+KUBERNETES_SERVER="${INPUT_SERVER}"
+KUBERNETES_TOKEN="${INPUT_TOKEN}"
+NAMESPACE="${INPUT_NAMESPACE}"
+DEPLOYMENT="${INPUT_NAME}"
+IMAGE="${INPUT_IMAGE}"
+CONTAINER="${INPUT_CONTAINER}"
 
 env
 
@@ -23,4 +23,4 @@ kubectl config use-context default
 
 echo "Deploying to $KUBERNETES_SERVER"
 
-kubectl -n "${NAMESPACE}" set image "deployment/${DEPLOYMENT}" "${CONTAINER}=${IMAGE}" --record
+kubectl -n "${NAMESPACE}" set image "deployment/${DEPLOYMENT}" "${CONTAINER}=${IMAGE}"
