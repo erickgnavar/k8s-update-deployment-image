@@ -8,6 +8,7 @@ DEPLOYMENT="${INPUT_NAME}"
 IMAGE="${INPUT_IMAGE}"
 CONTAINER="${INPUT_CONTAINER}"
 
+# TODO: remove this env call
 env
 
 if [ -z "${KUBERNETES_USER}" ]; then
