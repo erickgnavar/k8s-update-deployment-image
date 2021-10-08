@@ -23,4 +23,6 @@ kubectl config set-credentials "$CONTEXT" --token="$KUBERNETES_TOKEN"
 
 echo "Deploying to ${KUBERNETES_SERVER}"
 
+echo "Updating ${DEPLOYMENT} in ${NAMESPACE} with ${IMAGE}..."
+
 kubectl -n "${NAMESPACE}" set image "deployment/${DEPLOYMENT}" "${CONTAINER}=${IMAGE}"
